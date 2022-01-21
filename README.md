@@ -1,4 +1,4 @@
-# fourth-nano-project
+# fifth-nano-project
 
 ## Table of Contents
 
@@ -9,7 +9,7 @@
 ### General Info
 
 ***
-this is the fourth project of frontend nano degree of udacity which is a Evaluate a news article with nlp using node js and javascript.
+this is the fifth project of frontend nano degree of udacity which is a travel app using node js and javascript.
 (interacting between server side & client side)
 
 ## Technologies
@@ -27,7 +27,7 @@ A list of technologies used within the project:
 ***
 A little intro about the installation.
 
-$ git clone https://github.com/amir-91/fourth-nano-project
+$ git clone https://github.com/amir-91/capstone
 $ npm i
 $ cd ../path/to/the/file
 $ npm run start
