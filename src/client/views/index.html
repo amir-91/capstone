@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>check your url</title>
+    </head>
+    <body>
+        <main>
+            <h1>Enter url to check</h1>
+            <section class="form">
+             <form onsubmit="return Client.handleSubmit(event)">
+                 <input id="url" type="text" name="input" value="" placeholder="Enter your url">
+                 <input class="submitBtn" type="submit" name="" value="check URL" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
+             </form>
+         <section>
+
+            <section>
+                <h3>Form Results:</h3>
+                <div class="results">
+                    <div>Agreement: <span id="agreement"></span></div>
+                    <div>Subjectivity: <span id="subjectivity"></span></div>
+                    <div>Confidence: <span id="confidence"></span></div>
+                    <div>Irony: <span id="irony"></span></div>
+                    <div>Score Tag: <span id="score_tag"></span></div>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>
+
+<script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/service-worker.js')
+        });
+    }
+   </script>
