@@ -1,22 +1,21 @@
 body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-main {
-    flex: 2;
-    h1 {
+    padding: 20px;
+    header {
         text-align: center;
-        margin-top: 40px;
-        font-size: 50px;
+        font-size: 30px;
+        margin-bottom: 40px;
     }
-    h3 {
-        font-size: 20px;
+    .form__header {
+        display: flex;
+        justify-content: space-around;
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
     }
-}
-
-section {
-    max-width: 800px;
-    margin: 50px auto;
 }
