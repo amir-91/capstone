@@ -1,3 +1,6 @@
+//API_KEY=b0801a5fe9434afa86524525f0a483d5
+//IMAGE_KEY=25444368-a7b4d9fe478072d18b1bbfd9e
+
 let apiKey = ''
 let imageKey = ''
 const getApiKey = async () => {
@@ -9,7 +12,6 @@ const getApiKey = async () => {
 
 export function getCityData(date, city, postalCode) {
   if(date != '' && city != '' && postalCode != '') {
-    getApiKey()
     fetchImage(city)
     fetchData(city, date, postalCode)
     retrieveData()
@@ -22,13 +24,13 @@ export function getCityData(date, city, postalCode) {
 const fetchData = (city, date, postal) => {
   const startDate = date
   const endDate = date.replace(startDate.slice(-2), Number(startDate.slice(-2))+1)
-  fetch(`https://api.weatherbit.io/v2.0/history/daily?postal_code=${postal}&country=${city}&start_date=${startDate}&end_date=${endDate}&key=${apiKey}`)
+  fetch(`https://api.weatherbit.io/v2.0/history/daily?postal_code=${postal}&country=${city}&start_date=${startDate}&end_date=${endDate}&key=b0801a5fe9434afa86524525f0a483d5`)
   .then(response => response.json())
   .then(data => postUrl('http://localhost:8081/getCityData', data))
 }
 
 const fetchImage = (city) => {
-  fetch(`https://pixabay.com/api/?key=${imageKey}&q=${city}+places&image_type=photo&pretty=true`)
+  fetch(`https://pixabay.com/api/?key=25444368-a7b4d9fe478072d18b1bbfd9e&q=${city}+places&image_type=photo&pretty=true`)
   .then(response => response.json())
   .then(data => postImage('http://localhost:8081/getCityImage', data))
 }
