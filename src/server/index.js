@@ -15,7 +15,6 @@ const apiKey = {
     key: process.env.API_KEY,
     imageKey: process.env.IMAGE_KEY
 }
-console.log(apiKey)
 
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
