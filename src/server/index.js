@@ -39,7 +39,7 @@ app.get('/key', (req,res) => {
 // Post Route
 
 function cityData(req,res){
-    if(req.body.data[0]) {
+    if(req.body.data) {
         projectData['cityName'] = req.body.city_name
         projectData['time'] = req.body.timezone
         projectData['date'] = req.body.data[0].datetime
