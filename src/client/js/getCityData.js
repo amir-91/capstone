@@ -12,10 +12,15 @@ const getApiKey = async () => {
 
 export function getCityData(date, city, postalCode) {
   if(date != '' && city != '' && postalCode != '') {
-    fetchImage(city)
-    fetchData(city, date, postalCode)
-    retrieveData()
-    retrieveImages()
+    getApiKey().then(() => {
+      fetchData(city, date, postalCode)
+    }).then (() => {
+      fetchImage(city)
+    }).then (() => {
+      retrieveData()
+    }).then(()=>{
+      retrieveImages()
+    })
   } else {
     alert ('please enter city, date and postal code')
   }
