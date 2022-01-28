@@ -31,6 +31,10 @@ app.get('/images', (req,res) => {
 app.get('/key', (req,res) => {
     res.send(apiKey)
 })
+app.get('/', (req,res) => {
+    res.send('server is working')
+})
+
 
 
 
